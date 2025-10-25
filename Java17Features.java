@@ -1,10 +1,7 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
-
 class Main {
     public static void main(String[] args) {
         System.out.println("Try programiz.pro");
-        Shape s = new Shape();
+        Shape s = new Circle();
         s.print();
     }
 }
@@ -41,6 +38,13 @@ sealed class Shape permits Circle, Square {
 non-sealed class Circle extends Shape {
     public void print() {
         System.out.println("Inside Circle class print");
+        Object intObj = Integer.valueOf("5");
+        Object strObj = new String("hhh");
+        System.out.println(switch(strObj) {
+            case Integer i -> "Int " + i;
+            case String s -> "String " + s;
+            default -> "Unkown";
+        });
     }
 }
 non-sealed class Square extends Shape {
