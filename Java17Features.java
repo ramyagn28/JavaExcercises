@@ -1,3 +1,6 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
 class Main {
     public static void main(String[] args) {
         System.out.println("Try programiz.pro");
@@ -45,6 +48,12 @@ non-sealed class Circle extends Shape {
             case String s -> "String " + s;
             default -> "Unkown";
         });
+        
+        if(intObj instanceof Integer i) {
+            System.out.println("Integer +1 : " + (i+1));
+        } if (strObj instanceof String s) {
+            System.out.println("String append ptr : " + (s + "ptr"));
+        }
     }
 }
 non-sealed class Square extends Shape {
